@@ -1,50 +1,72 @@
-# IFT6758 TEAM B-04
-## Blog Post Repo
+# IFT6758 Blog Post Template
 
-## Environment Setup instructions for our team
-
-### Pre-requisites
-
-- **Ruby 3.2.5:**
-IMPORTANT: YOU MUST INSTALL VERSION 3.2.5 !!!
-IMPORTANT: YOU MUST DOWNLOAD "Ruby+DevKit" !!!
-https://rubyinstaller.org/downloads/
+This blog post template is based off of the [Lanyon](https://github.com/poole/lanyon) template (the original readme can be found at the bottom).
 
 
-### Installation
-1. Follow the instructions is this video:
-https://www.youtube.com/watch?v=LfP7Y9Ja6Qc&ab_channel=GiraffeAcademy
 
-2. Open command prompt
+## Installation
 
-3. Clone project repo, and go into that folder  
-```
- git clone https://github.com/sergemalo/IFT-6758-blog
- cd IFT-6758-project
+### Ubuntu
+
+1. Install Ruby (I'm using v3.2.5)
+
+```bash
+sudo apt install ruby-full
 ```
 
-4. Install jekhyll and bundler:
+2. Once installed, add the following to your `.bashrc` or whatever terminal startup script you may use:
+
+```bash
+export GEM_HOME="$HOME/.gem"
+export PATH="$HOME/.gem/bin:$PATH"
 ```
+
+3. Install bundler:
+
+```bash
 gem install jekyll bundler
 ```
 
-5. Install dependencies:
+4. Install dependencies:
+
+From within this repository's root directory, run:
+
 ```
 bundle install
 ```
 
-6. Add webrick:
+### MacOS and Windows
+
+Mac and Windows users can find relevant guides for installing Jekyll here:
+
+- [Windows guide](https://jekyllrb.com/docs/installation/windows/)
+- [MacOS guide](https://jekyllrb.com/docs/installation/macos/)
+
+Additionally, you will need to do a few steps in Windows before serving you are able to serve your page locally. The steps below are Windows only, and you won't need them if you're on a Linux based machine. 
+
+### Windows Specific Steps:
+
+Before running these, you'd want to make sure your Ruby and Jekyll installations are functional.
+
+1. From within the repository's root directory, run: 
+
 ```
 bundle add webrick
 ```
 
-7. Install wdm:
+2. Open the `gemfile` present in the root directory of the repository, and add the following line at the end of the file: 
+
+```
+gem 'wdm', '>= 0.1.0'
+```
+
+3. Run the following command in the same directory: 
+
 ```
 gem install wdm
 ```
 
 You should be able to serve the page locally on Windows after these steps. 
-
 
 ## Serving the Page Locally
 
