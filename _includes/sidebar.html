@@ -25,6 +25,16 @@
       {% endif %}
     {% endfor %}
 
+    <h3 style="color: grey; padding-left: 20px;">Recent Posts</h3> <!-- Heading for posts section -->
+    {% comment %}
+    Dynamically generate a sidebar nav of posts with `layout: post` in the front-matter.
+    {% endcomment %}
+
+    {% assign posts_list = site.posts | sort: "date" | reverse %} <!-- Sort posts by date, most recent first -->
+    {% for post in posts_list %}
+    <a class="sidebar-nav-item{% if page.url == post.url %} active{% endif %}" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+    {% endfor %}
+
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 
