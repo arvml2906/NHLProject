@@ -3,7 +3,7 @@ title:               IFT6758 Blog
 tagline:             'Data-Driven Insights from the Rink'
 description:         'Dive into the world of NHL hockey through the lens of data analytics. Made by Yue Xin Li, Yihang Huang, Serge Malo and Arvind Nair.'
 url:                 ''
-baseurl:             ''
+baseurl:             '/NHLProject'
 paginate:            5
 permalink:           pretty
 
