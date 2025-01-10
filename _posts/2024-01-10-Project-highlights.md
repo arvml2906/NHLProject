@@ -6,6 +6,11 @@ title: Project Highlights
 For all codes related to this project, please visit the following git repository :
 
 
+## Table of Contents
+- [Data Acquisition and Visualisation](#1-data-acquisition-and-visualisation)
+  - [Data Acquisition](#11-data-acquisition)
+  - [Visualisations](#12-simple-visualizations)
+
 
 ## 1. Data Acquisition and Visualisation
 **NOTE** : A more detailed version of this section is documented in the this [link]({{ site.url }}{{ site.baseurl }}/2024/09/17/milestone-1).
@@ -17,23 +22,23 @@ In this section, we first download the play-by-play events for each game using t
 
 To fetch the play-by-play events of a game of your choice, it is recommended to follow the following format:
 
-- Figuring out Game IDs for each season:
+Figuring out Game IDs for each season:
 
-      Since we download play-by-play events from each game (Regular and Playoffs) from seasons 2016-2017 to 2023-2024, we break-down the logic behind the naming of GAME_ID as mentioned in the following link :
+Since we download play-by-play events from each game (Regular and Playoffs) from seasons 2016-2017 to 2023-2024, we break-down the logic behind the naming of GAME_ID as mentioned in the following link :
 
-      [NHL API Game IDs Documentation](https://gitlab.com/dword4/nhlapi/-/blob/master/stats-api.md#game-ids)
+[NHL API Game IDs Documentation](https://gitlab.com/dword4/nhlapi/-/blob/master/stats-api.md#game-ids)
 
-      In brief, suppose we take GAME_ID ``` 2019020901 ``` and GAME_ID ``` 2021030217 ``` , the breakdown from left to right would be as follows:
+In brief, suppose we take GAME_ID ``` 2019020901 ``` and GAME_ID ``` 2021030217 ``` , the breakdown from left to right would be as follows:
 
-      ``` 2019020901 ```
-      - '2019' for the season 2019-2020.
-      - '02' for regular season.
-      - '0901' for game number 901 in the regular season.
+``` 2019020901 ```
+- '2019' for the season 2019-2020.
+- '02' for regular season.
+- '0901' for game number 901 in the regular season.
 
-      ``` 2021030217 ```
-      - '2021' for the season 2021-2022.
-      - '03' for the playoff season.
-      - '0217' -> For playoff games, the 2nd digit of the specific number gives the round of the playoffs, the 3rd digit specifies the matchup, and the 4th digit specifies the game (out of 7). (In this example: 7th game of match #1 in playoff round 2.)
+``` 2021030217 ```
+- '2021' for the season 2021-2022.
+- '03' for the playoff season.
+- '0217' -> For playoff games, the 2nd digit of the specific number gives the round of the playoffs, the 3rd digit specifies the matchup, and the 4th digit specifies the game (out of 7). (In this example: 7th game of match #1 in playoff round 2.)
 
 In our project, we ping each game and cache the play-by-play events for ALL NHL games from seasons 2016-2017 to 2023-2024 (including regular and playoffs games!). For more explanations, we have a [detailed web-page]({{ site.url }}{{ site.baseurl }}/2024/09/17/milestone-1) dedicated to this section.
 
