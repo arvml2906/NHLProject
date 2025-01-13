@@ -17,13 +17,13 @@ https://www.youtube.com/watch?v=LfP7Y9Ja6Qc&ab_channel=GiraffeAcademy
 
 2. Open command prompt
 
-3. Clone project repo, and go into that folder  
+3. Clone project repo, and go into that folder
 ```
- git clone https://github.com/sergemalo/IFT-6758-blog
+ git clone https://github.com/arvml2906/NHLProject.git
  cd IFT-6758-project
 ```
 
-4. Install jekhyll and bundler:
+4. Install jekyll and bundler:
 ```
 gem install jekyll bundler
 ```
@@ -43,7 +43,7 @@ bundle add webrick
 gem install wdm
 ```
 
-You should be able to serve the page locally on Windows after these steps. 
+You should be able to serve the page locally on Windows after these steps.
 
 
 ## Serving the Page Locally
@@ -63,7 +63,7 @@ Configuration file: /home/USER/ift6758-blog-template/_config.yml
             Source: /home/USER/ift6758-blog-template
        Destination: /home/USER/ift6758-blog-template/_site
  Incremental build: disabled. Enable with --incremental
-      Generating... 
+      Generating...
                     done in 0.661 seconds.
  Auto-regeneration: enabled for '/home/USER/ift6758-blog-template'
     Server address: http://127.0.0.1:4000/
