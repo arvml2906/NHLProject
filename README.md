@@ -1,5 +1,18 @@
-# IFT6758 TEAM B-04
-## Blog Post Repo
+# University of Montreal - Course IFT-6758 - Team B-04
+This is the **Blog** repository.  
+The **Blog website** is pusblished [here](https://arvml2906.github.io/NHLProject/)  
+The project **Source Code** repository is [here](https://github.com/arvml2906/IFT-6758-project)  
+
+## Team Members
+- **[Arvind Nair](https://github.com/arvml2906)**
+- **[Serge Malo](https://github.com/sergemalo)**
+- **[Yue Xin Li](https://github.com/yli421)**
+- **[Yihang Huang](https://github.com/QuoiHang)**
+
+## Project Blog
+In this course, we are required to create blog posts instead of reports.  
+This repository contains the data forming the blog posts for our team.  
+We have published the blog posts under a GitHub Pages website [here](https://arvml2906.github.io/NHLProject/)
 
 ## Environment Setup instructions for our team
 
