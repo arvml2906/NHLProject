@@ -10,7 +10,9 @@ For all codes related to this project, please visit the following git repository
 - [Data Acquisition and Visualisation](#1-data-acquisition-and-visualisation)
   - [Data Acquisition](#11-data-acquisition)
   - [Visualisations](#12-simple-visualizations)
-
+- [Feature Engineering and Model Training](#2-feature-engineering-and-model-training)
+  - [Shot Angle and Shot Distance plots](#21-histogram-of-shot-counts-binned-by-shot-distance-and-shot-angle)
+- [Video Demo of running the application with the deplopyed Model](#3-application-demo-using-live-nhl-game)
 
 ## 1. Data Acquisition and Visualisation
 **NOTE** : A more detailed version of this section is documented in the this [link]({{ site.url }}{{ site.baseurl }}/2024/09/17/milestone-1).
@@ -123,3 +125,41 @@ For the advanced visualisations, we have decided to include missed shots in our 
 
 ## 2. Feature Engineering and Model Training
 
+### 2.1 Histogram of shot counts binned by shot distance and shot angle
+
+**NOTE**: The 'Non-Goals' are shots classified as 'shot-on-goal' and 'missed-shots' in our data for seasons from 2016-2017 upto 2019-2020(4 seasons). Additionally, shot angles are higher for shots that are taken head-on. For example, a shot angle of 90 degrees means it is directed along the same line as taking a shot from the centre of the pitch towards goal.
+
+Plotting histogram of shot counts binned by shot distance:
+
+<img src="{{ site.baseurl }}/assets/images/Feature1_binshots_dist.png" alt="Goals by distance">
+<img src="{{ site.baseurl }}/assets/images/Feature1_binshotNg_distance.png" alt="Non-goals by distance">
+
+A more detailed version of this section is documented in the this [link]({{ site.url }}{{ site.baseurl }}/2024/11/13/milestone-2)
+
+Plotting histogram of shot counts binned by shot angle:
+
+<img src="{{ site.baseurl }}/assets/images/Feature1_binshotG_angle.png" alt="Goals by angle">
+<img src="{{ site.baseurl }}/assets/images/Feature1_binshotsNg_angle.png" alt="Non-goals by angle">
+
+### 2.2 Plotting Goal Rate (Goal/(No Goals + Goals)) binned by distance and shot angle
+
+Goal rate by shot distance:
+
+<img src="{{ site.baseurl }}/assets/images/Feature1_bingoals_distance.png" alt="Goal rate by distance">
+
+Goal rate by shot angle:
+
+<img src="{{ site.baseurl }}/assets/images/Feature1_bingoals_angle.png" alt="Goal rate by angle">
+
+### 2.3 Plotting Histograms of empty and non-empty goals
+
+<img src="{{ site.baseurl }}/assets/images/Feature1_emptygoals_dist.png" alt="Empty goals by distance">
+
+<img src="{{ site.baseurl }}/assets/images/Feature1_nonempty_distance.png" alt="Non Empty goals by distance">
+
+## 3 Application Demo using live NHL game
+The video starts by starting both containers with the `docker-compose up` command.  
+Then, the client app is demonstrated into the browser. The user can select a model and the game ID. The game ID selected was actually live during the recording of the video ([January 13th, 2025, Calgary Flames vs. Chicago Blackhawks](https://www.nhl.com/gamecenter/cgy-vs-chi/2025/01/13/2024020690/boxscore)).  
+We can see that the first select model predicts "0.4" goals for the Flames, and "0.6" goals for the Blackhawks, while the score was 1-1 when recording the video (there was 13 minutes left in the first period).  
+
+<iframe width="420" height="315" src="https://youtube.com/embed/GKGzfGlOhJI" frameborder="0" allowfullscreen></iframe>
